@@ -111,7 +111,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useAuth } from '../composables/useAuth'
+ 
 
 const { login, isAuthenticated, verifyToken } = useAuth()
 
@@ -124,7 +124,7 @@ onMounted(async () => {
 
 const loginForm = ref({
   username: 'admin',
-  password: 'admin123456',
+  password: '',
 })
 
 const loading = ref(false)
