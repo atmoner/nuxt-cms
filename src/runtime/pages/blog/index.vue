@@ -249,6 +249,9 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
+import { useBlog } from '~/composables/useBlog'
+
+const { getPublishedArticles } = useBlog()
 
 // SEO
 useSeoMeta({

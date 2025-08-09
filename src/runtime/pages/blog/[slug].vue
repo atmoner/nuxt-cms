@@ -255,6 +255,8 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { useBlog } from '../composables/useBlog'
 
 const route = useRoute()
 const { getArticle } = useBlog()
