@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, addComponent, createResolver, installModule, addServerHandler, addRouteMiddleware, addImports, addComponentsDir } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, addComponent, createResolver, installModule, addServerHandler, addRouteMiddleware, addImports, addComponentsDir, addImportsDir } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {}
@@ -12,6 +12,11 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {},
   async setup(_options, _nuxt) {
     const resolver = createResolver(import.meta.url)
+
+    // Configure transpilation for the module
+    _nuxt.options.build = _nuxt.options.build || {}
+    _nuxt.options.build.transpile = _nuxt.options.build.transpile || []
+    _nuxt.options.build.transpile.push(resolver.resolve('./runtime'))
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolver.resolve('./runtime/plugin'))
@@ -41,23 +46,8 @@ export default defineNuxtModule<ModuleOptions>({
       path: resolver.resolve('./runtime/middleware/auth'),
     })
 
-    // Add useAuth composable
-    addImports({
-      name: 'useAuth',
-      from: resolver.resolve('./runtime/composables/useAuth'),
-    })
-
-    // Add usePages composable
-    addImports({
-      name: 'usePages',
-      from: resolver.resolve('./runtime/composables/usePages'),
-    })
-
-    // Add useBlog composable
-    addImports({
-      name: 'useBlog',
-      from: resolver.resolve('./runtime/composables/useBlog'),
-    })
+    // Add all composables directory
+    addImportsDir(resolver.resolve('./runtime/composables'))
 
     // Install @nuxtjs/tailwindcss
     await installModule('@nuxtjs/tailwindcss', {
