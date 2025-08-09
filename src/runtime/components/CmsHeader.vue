@@ -123,7 +123,7 @@
 
 <script setup>
 // Importer le composable usePages pour les pages récentes seulement
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { usePages } from '../composables/usePages'
 
 // Props
