@@ -122,6 +122,10 @@
 </template>
 
 <script setup>
+// Importer le composable usePages pour les pages récentes seulement
+import { computed, onMounted } from 'vue'
+import { usePages } from '../composables/usePages'
+
 // Props
 defineProps({
   siteTitle: {
