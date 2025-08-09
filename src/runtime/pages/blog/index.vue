@@ -249,17 +249,7 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-import { useNuxtApp } from '#imports'
-
-const { useSeoMeta } = useNuxtApp()
-
-// SEO
-useSeoMeta({
-  title: 'Blog',
-  ogTitle: 'Blog',
-  description: 'Découvrez nos derniers articles, actualités et conseils.',
-  ogDescription: 'Découvrez nos derniers articles, actualités et conseils.',
-})
+ 
 
 // Reactive data
 const loading = ref(false)

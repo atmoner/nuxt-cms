@@ -256,9 +256,8 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { useNuxtApp } from '#imports'
-
-const { useSeoMeta } = useNuxtApp()
+ 
+//const { useSeoMeta } = useNuxtApp()
  
 
 const route = useRoute() 
@@ -302,14 +301,14 @@ const loadArticle = async () => {
     article.value = foundArticle
 
     // Update SEO meta
-    useSeoMeta({
+/*     useSeoMeta({
       title: article.value.title,
       ogTitle: article.value.title,
       description: article.value.meta_description || article.value.excerpt || article.value.content.substring(0, 160),
       ogDescription: article.value.meta_description || article.value.excerpt || article.value.content.substring(0, 160),
       ogImage: article.value.featured_image,
       keywords: article.value.meta_keywords,
-    })
+    }) */
   }
   catch (err) {
     error.value = err.message || 'Erreur lors du chargement de l\'article'
