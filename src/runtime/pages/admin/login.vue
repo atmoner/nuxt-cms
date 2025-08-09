@@ -113,7 +113,7 @@
 import { ref, onMounted } from 'vue'
  
 
-const { login, isAuthenticated, verifyToken } = useAuth()
+ 
 
 // Vérifier si l'utilisateur est déjà connecté
 onMounted(async () => {
