@@ -54,7 +54,7 @@ A complete Nuxt 3 module for creating and managing a Content Management System (
 Install the module to your Nuxt application with one command:
 
 ```bash
-npx nuxi module add nuxt-cms
+npx nuxi module add @atmoner/nuxt-cms
 ```
 
 Then start your application:
@@ -348,8 +348,8 @@ This module uses the following technologies:
 
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/nuxt-cms/latest.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-version-href]: https://npmjs.com/package/nuxt-cms
+[npm-version-src]: https://img.shields.io/npm/v/@atmoner/nuxt-cms/latest.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/@atmoner/nuxt-cms
 
 [npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-cms.svg?style=flat&colorA=020420&colorB=00DC82
 [npm-downloads-href]: https://npm.chart.dev/nuxt-cms

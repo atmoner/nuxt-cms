@@ -270,6 +270,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+
 const { user, logout, verifyToken } = useAuth()
 const loading = ref(true)
 

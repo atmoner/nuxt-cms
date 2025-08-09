@@ -102,6 +102,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+
 const route = useRoute()
 const slug = route.params.slug
 

@@ -370,6 +370,8 @@
 </template>
 
 <script setup>
+import { ref, computed, onMounted } from 'vue'
+
 const { user, logout, verifyToken } = useAuth()
 
 // État de la page

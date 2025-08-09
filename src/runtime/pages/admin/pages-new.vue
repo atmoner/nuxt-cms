@@ -266,6 +266,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+
 // Middleware de protection de la page
 definePageMeta({
   middleware: 'auth',

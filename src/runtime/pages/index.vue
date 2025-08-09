@@ -126,6 +126,7 @@
 
 <script setup>
 // Importer le composable usePages pour les pages récentes seulement
+import { computed, onMounted } from 'vue'
 import { usePages } from '../composables/usePages'
 
 // Utiliser le composable pour récupérer les pages (pour les pages récentes)

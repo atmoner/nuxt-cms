@@ -254,6 +254,8 @@
 </template>
 
 <script setup>
+import { ref, computed, onMounted } from 'vue'
+
 const route = useRoute()
 const { getArticle } = useBlog()
 
