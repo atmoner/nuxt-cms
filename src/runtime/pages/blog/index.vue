@@ -249,6 +249,8 @@
 
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
+import { useNuxtApp } from '#imports'
+
 const { useSeoMeta } = useNuxtApp()
 
 // SEO
