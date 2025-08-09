@@ -250,8 +250,6 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 
-const { getPublishedArticles } = useBlog()
-
 // SEO
 useSeoMeta({
   title: 'Blog',
