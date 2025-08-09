@@ -280,9 +280,9 @@ const analyticsOpen = ref(false)
 const teamOpen = ref(false)
 
 // Middleware de protection de la page
-definePageMeta({
+/* definePageMeta({
   middleware: 'auth',
-})
+}) */
 
 onMounted(async () => {
   await checkAuth()

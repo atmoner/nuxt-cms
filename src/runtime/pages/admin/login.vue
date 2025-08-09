@@ -111,9 +111,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
- 
-
- 
+import { verifyToken, login } from '#auth'
 
 // Vérifier si l'utilisateur est déjà connecté
 onMounted(async () => {
