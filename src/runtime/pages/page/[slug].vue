@@ -102,7 +102,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRoute, useHead } from '#app'
 
 const route = useRoute()
