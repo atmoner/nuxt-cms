@@ -433,6 +433,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useAuth } from '../composables/useAuth'
+import { useBlog } from '../composables/useBlog'
 
 definePageMeta({
   middleware: 'auth',

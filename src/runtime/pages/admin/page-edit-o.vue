@@ -419,6 +419,7 @@
 
 <script setup>
 import { ref, computed, watch, nextTick, onMounted } from 'vue'
+import { useAuth } from '../composables/useAuth'
 
 const { user, logout, verifyToken } = useAuth()
 const route = useRoute()

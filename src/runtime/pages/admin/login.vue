@@ -111,6 +111,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useAuth } from '../../composables/useAuth'
 
 // Utilisation du composable useAuth
 const { login, verifyToken } = useAuth()
