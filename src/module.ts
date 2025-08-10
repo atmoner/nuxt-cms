@@ -47,25 +47,7 @@ export default defineNuxtModule<ModuleOptions>({
     })
 
     // Add all composables directory
-    // addImportsDir(resolver.resolve('./runtime/composables'))
-
-    addImports({
-      name: 'useAuth',
-      as: 'useAuth',
-      from: resolver.resolve('./runtime/composables/useAuth'),
-    })
-
-    addImports({
-      name: 'useBlog',
-      as: 'useBlog',
-      from: resolver.resolve('./runtime/composables/useBlog'),
-    })
-
-    addImports({
-      name: 'usePage',
-      as: 'usePage',
-      from: resolver.resolve('./runtime/composables/usePage'),
-    })
+    addImportsDir(resolver.resolve('./runtime/composables'))
 
     // Install @nuxtjs/tailwindcss
     await installModule('@nuxtjs/tailwindcss', {
