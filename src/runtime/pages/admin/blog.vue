@@ -192,10 +192,10 @@
               </p>
             </div>
             <div class="flex items-center space-x-4">
-              <button
+              <NuxtLink
+                to="/nuxt-cms/admin/blog/new"
                 class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-colors flex items-center"
-                @click="navigateTo('/nuxt-cms/admin/blog/new')"
-              >
+              >              
                 <svg
                   class="h-4 w-4 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +211,7 @@
                   />
                 </svg>
                 Nouvel Article
-              </button>
+              </NuxtLink>
             </div>
           </div>
         </header>
@@ -312,12 +312,12 @@
                 <p class="text-gray-500 text-sm mb-4">
                   Commencez par créer votre premier article de blog.
                 </p>
-                <button
-                  class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-colors"
-                  @click="navigateTo('/nuxt-cms/admin/blog/new')"
-                >
+                <NuxtLink
+                  to="/nuxt-cms/admin/blog/new"
+                  class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-colors flex items-center"
+                >  
                   Créer un article
-                </button>
+                </NuxtLink>
               </div>
             </div>
 
@@ -587,7 +587,7 @@ const resetFilters = () => {
 }
 
 const editArticle = (id) => {
-  navigateTo(`/nuxt-cms/admin/blog-edit?id=${id}`)
+  return navigateTo(`/nuxt-cms/admin/blog-edit?id=${id}`)
 }
 
 const confirmDelete = (article) => {
