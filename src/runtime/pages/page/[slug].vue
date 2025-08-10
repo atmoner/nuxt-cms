@@ -103,7 +103,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useRoute, navigateTo } from '#app'
+import { useRoute, useHead } from '#app'
 
 const route = useRoute()
 const slug = route.params.slug
