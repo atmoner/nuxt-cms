@@ -494,6 +494,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useRoute, navigateTo } from '#app'
 import { useAuth } from '../../composables/useAuth'
 import { useBlog } from '../../composables/useBlog'
 

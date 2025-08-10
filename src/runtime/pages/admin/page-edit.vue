@@ -1040,6 +1040,7 @@
 
 <script setup>
 import { ref, computed, watch, nextTick, onMounted } from 'vue'
+import { useRoute, navigateTo } from '#app'
 import draggable from 'vuedraggable'
 import { useAuth } from '../../composables/useAuth'
 
