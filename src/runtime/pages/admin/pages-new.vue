@@ -267,8 +267,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useAuth } from '../composables/useAuth'
-import { usePages } from '../composables/usePages'
+import { useAuth } from '../../composables/useAuth'
+import { usePages } from '../../composables/usePages'
 
 // Middleware de protection de la page
 definePageMeta({

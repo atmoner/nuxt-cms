@@ -883,7 +883,7 @@
 <script setup>
 import { ref, computed, watch, nextTick, onMounted } from 'vue'
 import draggable from 'vuedraggable'
-import { useAuth } from '../composables/useAuth'
+import { useAuth } from '../../composables/useAuth'
 
 const { user, logout, verifyToken } = useAuth()
 const loading = ref(true)
