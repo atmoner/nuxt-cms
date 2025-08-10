@@ -1,6 +1,6 @@
 {
   "name": "@atmoner/nuxt-cms",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "A comprehensive CMS module for Nuxt applications with authentication, content management, and admin interface",
   "repository": "atmoner/nuxt-cms",
   "license": "MIT",
