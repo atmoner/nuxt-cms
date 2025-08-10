@@ -881,7 +881,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, nextTick, onMounted } from 'vue'
+import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import draggable from 'vuedraggable'
 import { useAuth } from '../../composables/useAuth'
 
@@ -947,11 +947,6 @@ const form = ref({
   meta_description: '',
   meta_keywords: '',
   status: 'published',
-})
-
-// Middleware de protection de la page
-definePageMeta({
-  middleware: 'auth',
 })
 
 onMounted(async () => {
