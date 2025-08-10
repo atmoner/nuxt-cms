@@ -272,7 +272,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// const { user, logout, verifyToken } = useAuth()
+const { user, logout, verifyToken } = useAuth()
 const loading = ref(true)
 
 // États pour les menus déroulants

@@ -112,6 +112,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+// Utilisation du composable useAuth
+const { login, verifyToken } = useAuth()
+
 // Vérifier si l'utilisateur est déjà connecté
 onMounted(async () => {
   if (await verifyToken()) {
