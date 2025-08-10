@@ -497,10 +497,6 @@ import { ref, computed, onMounted } from 'vue'
 import { useAuth } from '../../composables/useAuth'
 import { useBlog } from '../../composables/useBlog'
 
-definePageMeta({
-  middleware: 'auth',
-})
-
 const { $fetch } = useNuxtApp()
 const { logout } = useAuth()
 const { getArticles, deleteArticle: deleteArticleApi } = useBlog()

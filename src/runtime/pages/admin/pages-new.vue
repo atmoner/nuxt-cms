@@ -270,11 +270,6 @@ import { ref, onMounted } from 'vue'
 import { useAuth } from '../../composables/useAuth'
 import { usePages } from '../../composables/usePages'
 
-// Middleware de protection de la page
-definePageMeta({
-  middleware: 'auth',
-})
-
 const { user, logout, verifyToken } = useAuth()
 const { pages, loading: pagesLoading, error, fetchPages } = usePages()
 const loading = ref(true)

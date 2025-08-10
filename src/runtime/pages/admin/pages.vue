@@ -379,6 +379,7 @@
 import { ref, onMounted } from 'vue'
 import { useAuth } from '../../composables/useAuth'
 
+
 const { user, logout, verifyToken } = useAuth()
 const loading = ref(true)
 const pagesLoading = ref(false)
@@ -386,11 +387,6 @@ const pages = ref([])
 
 // États pour les menus déroulants
 const analyticsOpen = ref(false)
-
-// Middleware de protection de la page
-definePageMeta({
-  middleware: 'auth',
-})
 
 onMounted(async () => {
   await checkAuth()

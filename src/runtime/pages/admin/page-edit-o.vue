@@ -445,10 +445,6 @@ const form = ref({
   status: 'published',
 })
 
-// Middleware de protection de la page
-definePageMeta({
-  middleware: 'auth',
-})
 
 onMounted(async () => {
   await checkAuth()
